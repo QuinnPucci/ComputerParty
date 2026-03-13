@@ -17,10 +17,7 @@ public class GenericOrder<T> {
         items.add(item);
     }
 
-    // Maybe an addAll at some point
-
-    // getAllItems() as official “iteration access” method later (will just loop that copy in process())
-    // could use iterator here
+    // used in processor
     public List<T> getAllItems() {
         return new ArrayList<>(items); // returns a COPY for safety (calls cannot change the items)
     }
